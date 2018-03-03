@@ -50,10 +50,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A61DE12204A8B29009ED21F /* ShareManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShareManager;
+			sourceTree = "<group>";
+		};
 		C2285AEB1F3B402F00ED2696 = {
 			isa = PBXGroup;
 			children = (
-				C2285B0E1F3B404500ED2696 /* IFMShare */,
+				6A61DE12204A8B29009ED21F /* ShareManager */,
+				C2285B0E1F3B404500ED2696 /* Share */,
 				C2285AF61F3B402F00ED2696 /* IFMShareDemo */,
 				C2285AF51F3B402F00ED2696 /* Products */,
 			);
@@ -91,7 +99,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C2285B0E1F3B404500ED2696 /* IFMShare */ = {
+		C2285B0E1F3B404500ED2696 /* Share */ = {
 			isa = PBXGroup;
 			children = (
 				C29CA0DC1F41746F00798EE8 /* IFMShareImage.bundle */,
@@ -102,7 +110,7 @@
 				C29BB7371F3CA20700911BEC /* IFMShareView.h */,
 				C29BB7381F3CA20700911BEC /* IFMShareView.m */,
 			);
-			path = IFMShare;
+			path = Share;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
