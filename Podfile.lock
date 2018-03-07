@@ -1,0 +1,32 @@
+PODS:
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - MBProgressHUD (0.9.2)
+  - OAuthConsumer (1.0.3)
+
+DEPENDENCIES:
+  - BlocksKit (~> 2.2.5)
+  - MBProgressHUD (~> 0.9.1)
+  - OAuthConsumer (~> 1.0.3)
+
+SPEC CHECKSUMS:
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  OAuthConsumer: 9e99725d1d58d076ed13e6010a2d74f82e25e4cc
+
+PODFILE CHECKSUM: cd10b2c7aa3b3bfec49e758a73e31651d8b495ae
+
+COCOAPODS: 1.2.1

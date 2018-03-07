@@ -8,8 +8,10 @@
 
 #import "ViewController.h"
 #import "IFMShareView.h"
+#import "ShareManager.h"
+#import "SMConstant.h"
 
-@interface ViewController ()
+@interface ViewController () <ShareManagerDelegate>
 @property(nonatomic, strong) NSMutableArray *shareArray;
 @property(nonatomic, strong) NSMutableArray *functionArray;
 @end
@@ -20,12 +22,27 @@
     if (!_shareArray) {
         _shareArray = [NSMutableArray array];
         
-        [_shareArray addObject:IFMPlatformNameSms];
-        [_shareArray addObject:IFMPlatformNameEmail];
+//        [_shareArray addObject:IFMPlatformNameSms];
+//        [_shareArray addObject:IFMPlatformNameEmail];
         [_shareArray addObject:IFMPlatformNameSina];
         [_shareArray addObject:IFMPlatformNameWechat];
         [_shareArray addObject:IFMPlatformNameQQ];
-        [_shareArray addObject:IFMPlatformNameAlipay];
+//        [_shareArray addObject:IFMPlatformNameAlipay];
+        
+        {
+            [ShareManager sharedManager].shareDelegate = self;
+            
+//            [[ShareManager sharedManager] setContentWithTitle:_sTitle description:_sDesc image:_sImage url:_sUrl];
+//            [[ShareManager sharedManager] showShareWindow];
+            
+            [[ShareManager sharedManager] obtainAccessTokenWithPlatform:SMPlatformFacebookOAuth successBlock:^{
+//                [_facebookBtn setImage:[UIImage imageNamed:@"SMResources.bundle/images/facebook2"] forState:UIControlStateNormal];
+//                _enableFacebook = !_enableFacebook;
+//                [_shareList addObject:@(SMPlatformFacebookOAuth)];
+            } failBlock:^{
+                
+            }];
+        }
     }
     return _shareArray;
 }
@@ -137,6 +154,65 @@
     [shareView addImage:[UIImage imageNamed:@"share_alipay"]];
     
     return shareView;
+}
+
+#pragma mark - ShareManagerDelegate
+
+- (void)showShareResult:(SMShareResult *)result {
+    SMPlatform platform = result.platform;
+    ShareContentState state = result.state;
+    
+    NSString *message;
+    switch (platform) {
+        case SMPlatformFacebookOAuth:
+            if (state == ShareContentStateSuccess) {
+                message = @"(custom string) facebook share success";
+            } else {
+                message = @"(custom string) facebook share fail";
+            }
+            break;
+        case SMPlatformTwitterOAuth:
+            if (state == ShareContentStateSuccess) {
+                message = @"(custom string) twitter share success";
+            } else {
+                message = @"(custom string) twitter share fail";
+            }
+            break;
+        case SMPlatformWeiboOAuth:
+            if (state == ShareContentStateSuccess) {
+                message = @"(custom string) weibo share success";
+            } else {
+                message = @"(custom string) weibo share fail";
+            }
+            break;
+        case SMPlatformWeixin:
+            if (state == ShareContentStateSuccess) {
+                message = @"(custom string) weixin.success";
+            } else {
+                if (state == ShareContentStateUnInstalled) {
+                    message = @"(custom string) weixin not install";
+                } else {
+                    message = @"(custom string) weixin share fail";
+                }
+            }
+            break;
+        case SMPlatformTencentQQ:
+            if (state == ShareContentStateSuccess) {
+                message = @"(custom string) qzone success";
+            } else {
+                if (state == ShareContentStateUnInstalled) {
+                    message = @"(custom string) qzone not install";
+                } else {
+                    message = @"(custom string) qzone share fail";
+                }
+            }
+            break;
+        default:
+            break;
+    }
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hint" message:message delegate:nil cancelButtonTitle:@"Got it" otherButtonTitles:nil, nil];
+    [alertView show];
 }
 
 @end

@@ -37,9 +37,12 @@
 		C29BB7391F3CA20700911BEC /* IFMShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = C29BB7381F3CA20700911BEC /* IFMShareView.m */; };
 		C29BB73F1F3D44E800911BEC /* IFMShareItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C29BB73E1F3D44E800911BEC /* IFMShareItemCell.m */; };
 		C29CA0DD1F41746F00798EE8 /* IFMShareImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C29CA0DC1F41746F00798EE8 /* IFMShareImage.bundle */; };
+		DF31FC8C9B75E628B3C8BCFB /* libPods-IFMShareDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A28268F13794C0F45DC400 /* libPods-IFMShareDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32A28268F13794C0F45DC400 /* libPods-IFMShareDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IFMShareDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A76BBAFCC9931062F4B317 /* Pods-IFMShareDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IFMShareDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IFMShareDemo/Pods-IFMShareDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		6A61DE18204B9168009ED21F /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		6A61DE19204B9168009ED21F /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		6A61DE1B204B9168009ED21F /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 		C2285B031F3B402F00ED2696 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2285B061F3B402F00ED2696 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2285B081F3B402F00ED2696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C22E0B91740A3428B9AB482C /* Pods-IFMShareDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IFMShareDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-IFMShareDemo/Pods-IFMShareDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C29BB7341F3C9F7500911BEC /* IFMShareItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFMShareItem.h; sourceTree = "<group>"; };
 		C29BB7351F3C9F7500911BEC /* IFMShareItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFMShareItem.m; sourceTree = "<group>"; };
 		C29BB7371F3CA20700911BEC /* IFMShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFMShareView.h; sourceTree = "<group>"; };
@@ -105,12 +109,30 @@
 			files = (
 				6A61DE20204B9168009ED21F /* libWeChatSDK.a in Frameworks */,
 				6A61DE1E204B9168009ED21F /* TencentOpenAPI.framework in Frameworks */,
+				DF31FC8C9B75E628B3C8BCFB /* libPods-IFMShareDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C4E7A37E74E1E2006F628FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				36A76BBAFCC9931062F4B317 /* Pods-IFMShareDemo.debug.xcconfig */,
+				C22E0B91740A3428B9AB482C /* Pods-IFMShareDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		65EB118C9010967FB44E3A4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32A28268F13794C0F45DC400 /* libPods-IFMShareDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6A61DE12204A8B29009ED21F /* ShareManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +226,8 @@
 				C2285B0E1F3B404500ED2696 /* Share */,
 				C2285AF61F3B402F00ED2696 /* IFMShareDemo */,
 				C2285AF51F3B402F00ED2696 /* Products */,
+				3C4E7A37E74E1E2006F628FF /* Pods */,
+				65EB118C9010967FB44E3A4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -260,9 +284,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2285B0B1F3B402F00ED2696 /* Build configuration list for PBXNativeTarget "IFMShareDemo" */;
 			buildPhases = (
+				E6CE901024CCE368744A5CC4 /* [CP] Check Pods Manifest.lock */,
 				C2285AF01F3B402F00ED2696 /* Sources */,
 				C2285AF11F3B402F00ED2696 /* Frameworks */,
 				C2285AF21F3B402F00ED2696 /* Resources */,
+				034CAF350367C7E5E1402BE8 /* [CP] Embed Pods Frameworks */,
+				186190523CFD4990BACA64A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -322,6 +349,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		034CAF350367C7E5E1402BE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IFMShareDemo/Pods-IFMShareDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		186190523CFD4990BACA64A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IFMShareDemo/Pods-IFMShareDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6CE901024CCE368744A5CC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C2285AF01F3B402F00ED2696 /* Sources */ = {
@@ -467,6 +542,7 @@
 		};
 		C2285B0C1F3B402F00ED2696 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36A76BBAFCC9931062F4B317 /* Pods-IFMShareDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KYJLWXDV8Y;
@@ -487,6 +563,7 @@
 		};
 		C2285B0D1F3B402F00ED2696 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C22E0B91740A3428B9AB482C /* Pods-IFMShareDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KYJLWXDV8Y;
