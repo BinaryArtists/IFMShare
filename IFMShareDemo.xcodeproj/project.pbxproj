@@ -27,6 +27,13 @@
 		6A61DE53204B917B009ED21F /* NSString+util.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A61DE40204B917A009ED21F /* NSString+util.m */; };
 		6A61DE54204B917B009ED21F /* UIColor+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A61DE42204B917A009ED21F /* UIColor+hex.m */; };
 		6A61DE55204B917B009ED21F /* UIView+size.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A61DE44204B917B009ED21F /* UIView+size.m */; };
+		6A61DE6D204F86B3009ED21F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A61DE6C204F86B3009ED21F /* libsqlite3.0.tbd */; };
+		6A61DE6F204F86BC009ED21F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A61DE6E204F86BC009ED21F /* CoreFoundation.framework */; };
+		6A61DE71204F86C4009ED21F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A61DE70204F86C4009ED21F /* CoreTelephony.framework */; };
+		6A61DE73204F86D2009ED21F /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A61DE72204F86D2009ED21F /* libz.1.1.3.tbd */; };
+		6A61DE75204F86ED009ED21F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A61DE74204F86ED009ED21F /* CFNetwork.framework */; };
+		6A61DE77204F877E009ED21F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A61DE76204F877E009ED21F /* SystemConfiguration.framework */; };
+		6A61DE79204F87BC009ED21F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A61DE78204F87BC009ED21F /* libc++.tbd */; };
 		C2285AF91F3B402F00ED2696 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2285AF81F3B402F00ED2696 /* main.m */; };
 		C2285AFC1F3B402F00ED2696 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2285AFB1F3B402F00ED2696 /* AppDelegate.m */; };
 		C2285AFF1F3B402F00ED2696 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2285AFE1F3B402F00ED2696 /* ViewController.m */; };
@@ -82,6 +89,13 @@
 		6A61DE42204B917A009ED21F /* UIColor+hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+hex.m"; sourceTree = "<group>"; };
 		6A61DE43204B917B009ED21F /* UIView+size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+size.h"; sourceTree = "<group>"; };
 		6A61DE44204B917B009ED21F /* UIView+size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+size.m"; sourceTree = "<group>"; };
+		6A61DE6C204F86B3009ED21F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		6A61DE6E204F86BC009ED21F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		6A61DE70204F86C4009ED21F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6A61DE72204F86D2009ED21F /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
+		6A61DE74204F86ED009ED21F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6A61DE76204F877E009ED21F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6A61DE78204F87BC009ED21F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		C2285AF41F3B402F00ED2696 /* IFMShareDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IFMShareDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2285AF81F3B402F00ED2696 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2285AFA1F3B402F00ED2696 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,6 +121,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A61DE79204F87BC009ED21F /* libc++.tbd in Frameworks */,
+				6A61DE77204F877E009ED21F /* SystemConfiguration.framework in Frameworks */,
+				6A61DE75204F86ED009ED21F /* CFNetwork.framework in Frameworks */,
+				6A61DE73204F86D2009ED21F /* libz.1.1.3.tbd in Frameworks */,
+				6A61DE71204F86C4009ED21F /* CoreTelephony.framework in Frameworks */,
+				6A61DE6F204F86BC009ED21F /* CoreFoundation.framework in Frameworks */,
+				6A61DE6D204F86B3009ED21F /* libsqlite3.0.tbd in Frameworks */,
 				6A61DE20204B9168009ED21F /* libWeChatSDK.a in Frameworks */,
 				6A61DE1E204B9168009ED21F /* TencentOpenAPI.framework in Frameworks */,
 				DF31FC8C9B75E628B3C8BCFB /* libPods-IFMShareDemo.a in Frameworks */,
@@ -128,6 +149,13 @@
 		65EB118C9010967FB44E3A4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6A61DE78204F87BC009ED21F /* libc++.tbd */,
+				6A61DE76204F877E009ED21F /* SystemConfiguration.framework */,
+				6A61DE74204F86ED009ED21F /* CFNetwork.framework */,
+				6A61DE72204F86D2009ED21F /* libz.1.1.3.tbd */,
+				6A61DE70204F86C4009ED21F /* CoreTelephony.framework */,
+				6A61DE6E204F86BC009ED21F /* CoreFoundation.framework */,
+				6A61DE6C204F86B3009ED21F /* libsqlite3.0.tbd */,
 				32A28268F13794C0F45DC400 /* libPods-IFMShareDemo.a */,
 			);
 			name = Frameworks;
@@ -546,6 +574,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KYJLWXDV8Y;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShareVendor/TencentQQ",
@@ -567,6 +596,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KYJLWXDV8Y;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShareVendor/TencentQQ",

@@ -7,16 +7,33 @@
 //
 
 #import "AppDelegate.h"
+#import "ShareManager.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
+- (void)initSharePlatform
+{
+#warning Replace the share platforms app key, secret and redirect uri to yours
+    NSLog(@"Please replace the share platforms app key, secret and redirect uri to yours at the beginning.");
+    [[ShareManager sharedManager] initTencentQQWithAppKey:@"kQzoneKey" appSecret:@"kQzoneSecret"];
+    [[ShareManager sharedManager] initWexinWithAppKey:@"kWeixinAppKey" appSecret:@"kWeixinAppSecret"];
+    [[ShareManager sharedManager] initWeiboWithAppKey:@"kWeiboAppKey" appSecret:@"kWeiboSecret" redirectUri:@"kWeiboRedirectUri"];
+    [[ShareManager sharedManager] initTwitterWithAppKey:@"kTwitterAppKey" appSecret:@"kTwitterAppSecret" redirectUri:@"kTwitterRedirectUri"];
+    [[ShareManager sharedManager] initFacebookWithAppKey:@"kFacebookAppKey" appSecret:@"kFacebookAppSecret" redirectUri:@"kFacebookRedirectUri"];
+    [[ShareManager sharedManager] initInstagram];
+    
+    //The Platforms To Share
+    NSArray *platforms = @[@(SMPlatformFacebookOAuth),@(SMPlatformTwitterOAuth),@(SMPlatformInstagram),@(SMPlatformWeiboOAuth),@(SMPlatformTencentQQ),@(SMPlatformWeixin)];
+    [[ShareManager sharedManager] usePlatforms:platforms];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [self initSharePlatform];
+    
     return YES;
 }
 
@@ -47,5 +64,15 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+// MARK: -
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+     return [[ShareManager sharedManager] handleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return [[ShareManager sharedManager] handleOpenURL:url];
+}
 
 @end

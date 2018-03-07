@@ -22,26 +22,15 @@
     if (!_shareArray) {
         _shareArray = [NSMutableArray array];
         
-//        [_shareArray addObject:IFMPlatformNameSms];
-//        [_shareArray addObject:IFMPlatformNameEmail];
+        [_shareArray addObject:IFMPlatformNameSms];
+        [_shareArray addObject:IFMPlatformNameEmail];
         [_shareArray addObject:IFMPlatformNameSina];
         [_shareArray addObject:IFMPlatformNameWechat];
         [_shareArray addObject:IFMPlatformNameQQ];
-//        [_shareArray addObject:IFMPlatformNameAlipay];
+        [_shareArray addObject:IFMPlatformNameAlipay];
         
         {
             [ShareManager sharedManager].shareDelegate = self;
-            
-//            [[ShareManager sharedManager] setContentWithTitle:_sTitle description:_sDesc image:_sImage url:_sUrl];
-//            [[ShareManager sharedManager] showShareWindow];
-            
-            [[ShareManager sharedManager] obtainAccessTokenWithPlatform:SMPlatformFacebookOAuth successBlock:^{
-//                [_facebookBtn setImage:[UIImage imageNamed:@"SMResources.bundle/images/facebook2"] forState:UIControlStateNormal];
-//                _enableFacebook = !_enableFacebook;
-//                [_shareList addObject:@(SMPlatformFacebookOAuth)];
-            } failBlock:^{
-                
-            }];
         }
     }
     return _shareArray;

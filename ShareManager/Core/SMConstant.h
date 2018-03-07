@@ -15,8 +15,14 @@
 #import "UIView+size.h"
 #import "UIColor+hex.h"
 
+#ifndef SCREEN_WIDTH
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#endif
+
+#ifndef SCREEN_HEIGHT
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#endif
+
 #define Locale(str)  NSLocalizedStringFromTableInBundle(str, @"Root", [NSBundle bundleWithPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"SMResources.bundle"]], nil)
 #define LoadImage(img)  [UIImage imageNamed:[NSString stringWithFormat:@"SMResources.bundle/images/%@", img]
 
@@ -36,9 +42,9 @@ typedef enum{
 typedef NS_ENUM(NSInteger, SMPlatform) {
     SMPlatformTencentQQ = 1,
     SMPlatformWeixin,
-//    SMPlatformWeibo,
+    SMPlatformWeibo,
     SMPlatformWeiboOAuth,
-//    SMPlatformFacebook,
+    SMPlatformFacebook,
     SMPlatformFacebookOAuth,
     SMPlatformTwitterOAuth,
     SMPlatformInstagram,
